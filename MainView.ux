@@ -1,0 +1,20 @@
+<App Background="#fff">
+  <Router ux:Name="router" />
+
+  <Page ux:Class="MyPage">
+    <EnteringAnimation>
+      <Move X="-1" RelativeTo="ParentSize" Easing="CubicInOut" Duration="4"/>
+    </EnteringAnimation>
+    <ExitingAnimation>
+      <Move X="1" RelativeTo="ParentSize" Easing="CubicIn" Duration="1"/>
+    </ExitingAnimation>
+  </Page>
+
+  <ClientPanel>
+    <PageControl Active="{home}" Transition="None">
+      <NavigationMotion Overflow="Elastic" />
+      <HomePage Name="home" router="router" Color="#1565C0"/>
+      <EditHikePage Name="editHike" router="router" Color="#fff3"/>
+    </PageControl>
+  </ClientPanel>
+</App>
