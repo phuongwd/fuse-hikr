@@ -1,6 +1,9 @@
 <Page ux:Class="EditHikePage" Transition="None">
-    <Transition>
-        <Move X="1" RelativeTo="ParentSize" Duration="0.4" Easing="CubicInOut"/>
+    <Transition Direction="ToActive">
+        <Move X="1" RelativeTo="ParentSize" Duration="0.5" Easing="CubicInOut"/>
+    </Transition>
+    <Transition Direction="ToInactive">
+        <Move X="1" RelativeTo="ParentSize" Duration="0.6" Easing="CubicInOut"/>
     </Transition>
 
     <Router ux:Dependency="router" />

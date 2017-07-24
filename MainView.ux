@@ -12,8 +12,8 @@
  -->
   <ClientPanel>
     <Navigator DefaultPath="home" ClipToBounds="true">
-      <HomePage Name="home" router="router" Color="#1565C0"/>
-      <EditHikePage Name="editHike" router="router" Color="#fff3"/>
+      <HomePage Name="home" router="router" Background="#1565C0"/>
+      <EditHikePage Name="editHike" router="router" Background="#fff"/>
     </Navigator>
   </ClientPanel>
 </App>
