@@ -1,4 +1,11 @@
-<MyPage ux:Class="HomePage">
+<Page ux:Class="HomePage" Transition="None">
+  <Transition Direction="ToActive">
+    <Move X="-0.9" RelativeTo="ParentSize" Duration="0.4" Easing="CubicInOut"/>
+  </Transition>
+  <Transition Direction="ToInactive">
+    <Move X="-0.9" RelativeTo="ParentSize" Duration="0.9" Easing="CubicInOut"/>
+  </Transition>
+
 	<Router ux:Dependency="router" />
 	<JavaScript File="HomePage.js" />
 
@@ -9,4 +16,4 @@
 			</Each>
 		</StackPanel>
 	</ScrollView>
-</MyPage>
+</Page>

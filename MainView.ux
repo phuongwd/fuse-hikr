@@ -1,7 +1,7 @@
 <App Background="#fff">
   <Router ux:Name="router" />
 
-  <Page ux:Class="MyPage">
+ <!--  <Page ux:Class="MyPage" Transition="None">
     <EnteringAnimation>
       <Move X="-1" RelativeTo="ParentSize" Easing="CubicInOut" Duration="4"/>
     </EnteringAnimation>
@@ -9,12 +9,11 @@
       <Move X="1" RelativeTo="ParentSize" Easing="CubicIn" Duration="1"/>
     </ExitingAnimation>
   </Page>
-
+ -->
   <ClientPanel>
-    <PageControl Active="{home}" Transition="None">
-      <NavigationMotion Overflow="Elastic" />
+    <Navigator DefaultPath="home" ClipToBounds="true">
       <HomePage Name="home" router="router" Color="#1565C0"/>
       <EditHikePage Name="editHike" router="router" Color="#fff3"/>
-    </PageControl>
+    </Navigator>
   </ClientPanel>
 </App>

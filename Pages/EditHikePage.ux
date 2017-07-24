@@ -1,6 +1,9 @@
-<MyPage ux:Class="EditHikePage">
-    <Router ux:Dependency="router" />
+<Page ux:Class="EditHikePage" Transition="None">
+    <Transition>
+        <Move X="1" RelativeTo="ParentSize" Duration="0.4" Easing="CubicInOut"/>
+    </Transition>
 
+    <Router ux:Dependency="router" />
     <JavaScript File="EditHikePage.js" />
 
     <ScrollView>
@@ -26,4 +29,4 @@
         <Button Text="Back" Clicked="{goBack}" />
       </StackPanel>
     </ScrollView>
-</MyPage>
+</Page>
