@@ -1,16 +1,19 @@
 <Page ux:Class="EditHikePage" Transition="None">
     <Transition Direction="ToActive">
-        <Move X="1" RelativeTo="ParentSize" Duration="0.5" Easing="CubicInOut"/>
+        <Move X="1" RelativeTo="ParentSize" Duration="0.4" Easing="CubicInOut"/>
     </Transition>
     <Transition Direction="ToInactive">
         <Move X="1" RelativeTo="ParentSize" Duration="0.6" Easing="CubicInOut"/>
+        <Change sidebarFade.Opacity="1" Duration="0.6" />
     </Transition>
 
     <Router ux:Dependency="router" />
     <JavaScript File="EditHikePage.js" />
 
+    <Rectangle ux:Name="sidebarFade" Layer="Overlay" Color="#0005" Opacity="0" HitTestMode="None" />
+
     <ScrollView>
-      <StackPanel>
+      <StackPanel Padding="20">
 
         <Text Value="{name}" />
 

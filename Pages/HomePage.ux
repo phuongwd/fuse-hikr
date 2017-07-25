@@ -3,16 +3,26 @@
     <Move X="-1" RelativeTo="ParentSize" Duration="0.4" Easing="CubicInOut"/>
   </Transition>
   <Transition Direction="ToInactive">
-    <Move X="-0.5" RelativeTo="ParentSize" Duration="0.6" Easing="CubicInOut"/>
+    <Move X="-0.3" RelativeTo="ParentSize" Duration="0.6" Easing="CubicInOut"/>
+    <Change sidebarFade.Opacity="1" Duration="0.6" />
   </Transition>
+
+  <!-- <DeactivatingAnimation>
+    <Change sidebarFade.Opacity=".7" />
+  </DeactivatingAnimation> -->
 
 	<Router ux:Dependency="router" />
 	<JavaScript File="HomePage.js" />
 
-	<ScrollView>
-		<StackPanel>
+  <Rectangle ux:Name="sidebarFade" Layer="Overlay" Color="#0005" Opacity="0" Width="100%" Height="100%" HitTestMode="None" />
+  
+  <ScrollView>
+    <StackPanel Alignment="Left" Padding="20">
+      <Text Color="#000" FontSize="42" Margin="0,0,0,40">App</Text>
 			<Each Items="{hikes}">
-				<Button Text="{name}" Clicked="{goToHike}" />
+				<Button Clicked="{goToHike}" Alignment="Left">
+          <Text Color="#000">{name}</Text>
+        </Button>
 			</Each>
 		</StackPanel>
 	</ScrollView>
